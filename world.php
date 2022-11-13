@@ -19,10 +19,16 @@ $country = filter_input(INPUT_GET, "country", FILTER_SANITIZE_STRING);
 $countryq = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
 $results = $countryq->fetchAll(PDO::FETCH_ASSOC);
 
+$city = filter_input(INPUT_GET, "city", FILTER_SANITIZE_STRING);
+$cityq = $conn->query("SELECT cities.name, cities.district, cities.population FROM cities JOIN countries ON cities.country_code = countries.code WHERE countries.name LIKE '%$city%'");
+$cityresults = $cityq->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
+
 
 <?php
 
+if (isset($country)){
   echo("<table>");
     echo("<thead>");
       echo("<tr>");
@@ -43,5 +49,31 @@ $results = $countryq->fetchAll(PDO::FETCH_ASSOC);
     }
     echo("</tbody>");
   echo("</table>");
+}
+
+?>
+
+<?php
+
+if (isset($city)){
+  echo("<table>");
+    echo("<thead>");
+      echo("<tr>");
+        echo("<th>Name</th>");
+        echo("<th>District</th>");
+        echo("<th>Population</th>");
+      echo("</tr>");
+    echo("</thead>");
+    echo("<tbody>");
+    foreach ($cityresults as $row){
+      echo("<tr>");
+        echo("<td>".$row["name"]."</td>");
+        echo("<td>".$row["district"]."</td>");
+        echo("<td>".$row["population"]."</td>");
+      echo("</tr>");
+    }
+    echo("</tbody>");
+  echo("</table>");
+}
 
 ?>
