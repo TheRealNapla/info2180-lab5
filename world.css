@@ -1,8 +1,110 @@
 /* Add your own styles */
 body {
+    background: rgb(247,250,252);
     margin: 0;
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     display: flex;
     flex-direction: column;
+}
+
+header {
+    background: rgb(74, 85, 104);
+    color: white;
+    padding-top: 30px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width: 250px;
+    padding-right: 10px;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+
+}
+
+#country {
+    padding: 20px 40px 20px 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#control-buttons {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+button {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px 20px 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#lookup {
+    background: rgb(56,178,172);
+}
+
+#city-lookup {
+    background: rgb(66,153,225);
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid rgb(74, 85, 104);
+    padding: 12px;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background: rgb(74, 85, 104);
+    color: white;
+    font-size: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }

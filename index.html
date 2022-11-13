@@ -13,18 +13,25 @@
 
 	<body>
 		<header>
-			<h1>World Database Lookup</h1>
+			<div class = "container">
+				<img src="undraw_World_re_768g.svg">
+				<h1>World Database Lookup</h1>				
+			</div>
 		</header>
 
 		<main>
-			<div id="controls">
-				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup Country</button>
-				<button id="city-lookup">Lookup City</button>
-			</div>
-			
-			<div id="result">
-				<!-- countries will appear here -->
+			<div class = "container">
+				<di id="controls">
+					<input id="country" type="search" name="country" placeholder="Enter country name" />
+					<div id="control-buttons">
+						<button id="lookup">Lookup Country</button>
+						<button id="city-lookup">Lookup City</button>
+					</div>
+				</div>
+				
+				<div id="result">
+					<!-- countries will appear here -->
+				</div>
 			</div>
 		</main>
 
